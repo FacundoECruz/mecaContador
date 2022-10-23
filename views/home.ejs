@@ -25,6 +25,12 @@
                         <label class="form-label" for="mistakes">Mistakes %</label>
                         <input class="form-control" type="number" step="any" id="mistakes" name="meca[mistakes]" required>
                     </div>
+                    
+                    <ul>
+                        <% for (let m of mecas) {%>
+                            <li><%= m.indice %></li>
+                        <% } %>   
+                    </ul>
 
                     <button class="btn btn-primary">Save</button>
                 </form>
