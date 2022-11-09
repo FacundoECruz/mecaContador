@@ -9,7 +9,7 @@ const fecha = () => {
     const dias = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'];
     const meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
     const date = new Date;
-    const fullDate = `${dias[date.getDay()]}, ${date.getDate()} de ${meses[date.getMonth()]}, de ${date.getFullYear()}`
+    const fullDate = `${dias[date.getDay()]}, ${date.getDate()} de ${meses[date.getMonth()]}, de ${date.getFullYear()}. ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
     return fullDate;
 }
 
