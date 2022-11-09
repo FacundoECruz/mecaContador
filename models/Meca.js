@@ -5,7 +5,7 @@ const mecaSchema = new Schema({
     speed: Number,
     mistakes: Number,
     indice: Number,
-    date: Number
+    date: String
 })
 
 module.exports = mongoose.model('Meca', mecaSchema)
