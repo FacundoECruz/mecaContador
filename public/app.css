@@ -31,6 +31,18 @@ ul {
 }
 
 li {
+    font-family: roboto, sans-serif;
+    font-weight: 100;
     color: #abd;
     margin: 4px;
+    border: 1px solid black;
+}
+
+p {
+    margin: 2px 0px;
+}
+
+b {
+    color: black;
+    font-weight: 700;
 }

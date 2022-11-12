@@ -29,11 +29,16 @@
                     </div>
                     <button>Save</button>
                 </form>
-                
+
                 <ul>
                     <% for (let m of mecas) {%>
-                        <li><b>Indice:</b> <%= m.indice %>, 
-                           <span><b>Fecha:</b> <%= m.date %></span> 
+                        <li>
+                            <p><b>Indice:</b>
+                                <%= m.indice %>
+                            </p>
+                            <p><b>Fecha:</b>
+                                <%= m.date %>
+                            </p>
                         </li>
                         <% } %>
                 </ul>
