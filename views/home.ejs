@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-        <link href="app.css" rel="stylesheet">
+    <link href="app.css" rel="stylesheet">
     <title>MecaContador</title>
 </head>
 
@@ -24,17 +24,19 @@
 
                     <div class="mb-3">
                         <label class="form-label" for="mistakes">Mistakes %</label>
-                        <input class="form-control" type="number" step="any" id="mistakes" name="meca[mistakes]" required>
+                        <input class="form-control" type="number" step="any" id="mistakes" name="meca[mistakes]"
+                            required>
                     </div>
-                    
-                    <ul>
-                        <% for (let m of mecas) {%>
-                            <li>Indice: <%= m.indice %>, Fecha: <%= m.date %> </li>
-                        <% } %>   
-                    </ul>
-
                     <button>Save</button>
                 </form>
+                
+                <ul>
+                    <% for (let m of mecas) {%>
+                        <li><b>Indice:</b> <%= m.indice %>, 
+                           <span><b>Fecha:</b> <%= m.date %></span> 
+                        </li>
+                        <% } %>
+                </ul>
             </div>
         </div>
     </div>

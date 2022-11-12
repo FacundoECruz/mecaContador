@@ -3,7 +3,7 @@ h1 {
 }
 
 html, body {
-    background-color: #246;
+    background-color: #036;
 }
 
 label {
@@ -11,7 +11,26 @@ label {
 }
 
 button {
+    width: 65px;
     background-color: #080;
     color: #fff;
-    padding: 5px;
+    padding: 7px;
+    border: 1px solid #fff;
+    border-radius: 25%;
+}
+
+button:hover{
+    background-color: #abd;
+    color: #246;
+}
+
+ul {
+    background-color: #369;
+    margin: 20px 5px;
+    padding: 20px;
+}
+
+li {
+    color: #abd;
+    margin: 4px;
 }
