@@ -46,3 +46,13 @@ b {
     color: black;
     font-weight: 700;
 }
+
+/* #contenedor {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  #contenedor > div {
+    width: 50%;
+  } */

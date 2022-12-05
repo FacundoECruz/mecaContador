@@ -1,79 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link href="app.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link href="app.css" rel="stylesheet" />
     <title>MecaContador</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <div class="row">
-            <div class="col-6 offset-3">
-                <h1>Contador de mecanografía</h1>
-                <form action="/meca" method="POST" class="needs-validation" novalidate>
-                    <div class="mb-3">
-                        <label class="form-label" for="speed">Speed</label>
-                        <input class="form-control" type="text" id="speed" name="meca[speed]" required>
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label" for="mistakes">Mistakes %</label>
-                        <input class="form-control" type="number" step="any" id="mistakes" name="meca[mistakes]"
-                            required>
-                    </div>
-                    <button>Save</button>
-                </form>
-
-                <ul>
-                    <% for (let m of mecas) {%>
-                        <li>
-                            <p><b>Indice:</b>
-                                <%= m.indice %>
-                            </p>
-                            <p><b>Fecha:</b>
-                                <%= m.date %>
-                            </p>
-                        </li>
-                        <% } %>
-                </ul>
+      <div class="row">
+        <div class="col-6">
+          <h1>Contador de mecanografía</h1>
+          <form
+            action="/meca"
+            method="POST"
+            class="needs-validation"
+            novalidate
+          >
+            <div class="mb-3">
+              <label class="form-label" for="speed">Speed</label>
+              <input
+                class="form-control"
+                type="text"
+                id="speed"
+                name="meca[speed]"
+                required
+              />
             </div>
+
+            <div class="mb-3">
+              <label class="form-label" for="mistakes">Mistakes %</label>
+              <input
+                class="form-control"
+                type="number"
+                step="any"
+                id="mistakes"
+                name="meca[mistakes]"
+                required
+              />
+            </div>
+            <button>Save</button>
+          </form>
         </div>
+        <div class="col-6">
+          <ul>
+            <% for (let m of mecas) {%>
+            <li>
+              <p>
+                <b>Indice:</b>
+                <%= m.indice %>
+              </p>
+              <p>
+                <b>Fecha:</b>
+                <%= m.date %>
+              </p>
+            </li>
+            <% } %>
+          </ul>
+        </div>
+      </div>
     </div>
 
-
     <script>
-        (() => {
-            'use strict'
+      (() => {
+        "use strict";
 
-            // Fetch all the forms we want to apply custom Bootstrap validation styles to
-            const forms = document.querySelectorAll('.needs-validation')
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll(".needs-validation");
 
-            // Loop over them and prevent submission
-            Array.from(forms).forEach(form => {
-                form.addEventListener('submit', event => {
-                    if (!form.checkValidity()) {
-                        event.preventDefault()
-                        event.stopPropagation()
-                    }
+        // Loop over them and prevent submission
+        Array.from(forms).forEach((form) => {
+          form.addEventListener(
+            "submit",
+            (event) => {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
 
-                    form.classList.add('was-validated')
-                }, false)
-            })
-        })()
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
     </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
-        integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
-        crossorigin="anonymous"></script>
-</body>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+      integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
