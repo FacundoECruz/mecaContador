@@ -26,7 +26,8 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
 app.get('/meca', async (req, res) => {
-    const mecas = await Meca.find({});
+    const mecasDb = await Meca.find({});
+    const mecas = mecasDb.reverse();
     res.render('home', { mecas })
 })
 
