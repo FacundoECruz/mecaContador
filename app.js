@@ -34,7 +34,7 @@ app.post('/meca', async (req, res) => {
     const { speed, mistakes } = req.body.meca
     const meca = new Meca(req.body.meca);
     meca.indice = speed / (mistakes*10)
-    meca.date = moment().format()
+    meca.date = moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
     await meca.save();
     res.redirect('/meca')
 })
