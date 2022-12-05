@@ -53,13 +53,11 @@
         <div class="col-6">
           <ul>
             <% for (let m of mecas) {%>
-            <li>
-              <p>
-                <b>Indice:</b>
+            <li class="list-item">
+              <p class="index-<%= m.indice < 5 ? 'low' : 'high'%>">
                 <%= m.indice %>
               </p>
               <p>
-                <b>Fecha:</b>
                 <%= m.date %>
               </p>
             </li>

@@ -1,9 +1,9 @@
-h1 {
-    color: orange;
-}
-
 html, body {
     background-color: #036;
+}
+
+h1 {
+    color: orange;
 }
 
 label {
@@ -42,11 +42,19 @@ p {
     margin: 2px 0px;
 }
 
-b {
-    color: black;
-    font-weight: 700;
-}
-
 .input {
     width: 75%;
+}
+
+.list-item {
+    background-color: #469;
+    padding: 2px;
+}
+
+.index-low {
+    color: rgb(247, 93, 93);
+}
+
+.index-high {
+    color: rgb(188, 209, 215);
 }
