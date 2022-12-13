@@ -1,5 +1,6 @@
 html, body {
     background-color: #036;
+    box-sizing: border-box;
 }
 
 h1 {
@@ -27,7 +28,7 @@ button:hover{
 ul {
     background-color: #369;
     margin: 20px 5px;
-    padding: 20px;
+    padding: 20px; 
 }
 
 li {
@@ -40,21 +41,34 @@ li {
 
 p {
     margin: 2px 0px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .input {
     width: 75%;
 }
 
+.list-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 .list-item {
     background-color: #469;
     padding: 2px;
+    width: 45%;
+    list-style:none;
 }
 
 .index-low {
     color: rgb(247, 93, 93);
+    font-weight: 700;
 }
 
 .index-high {
     color: rgb(188, 209, 215);
+    font-weight: 700;
 }
+
+
